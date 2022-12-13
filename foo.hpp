@@ -8,7 +8,7 @@
 std::vector< char > foo(std::list< Human >& people)
 {
     std::vector<char> v1;
-    int size = v1.capacity();
+    int size = people.size();
     std::list<Human>::iterator it = people.end();
     
     for (int i = size; i>0; i--)
