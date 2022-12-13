@@ -13,7 +13,7 @@ std::vector< char > foo(std::list< Human >& people)
     
     for (int i = size; i>0; i--)
     {
-
+        it--;
     it->birthday();
     
         if(it->isMonster())
@@ -24,7 +24,6 @@ std::vector< char > foo(std::list< Human >& people)
         {
             v1.push_back('y');
         }
-    it--;
     }
 
 return(v1);
