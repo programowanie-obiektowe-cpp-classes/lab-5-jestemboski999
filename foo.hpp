@@ -9,20 +9,22 @@ std::vector< char > foo(std::list< Human >& people)
 {
     std::vector<char> v1;
     int size = v1.capacity();
-    std::list<Human>::iterator it;
+    std::list<Human>::iterator it = people.end();
     
-    for (it = people.end(); it != people.begin(); it--)
+    for (int i = size; i>0; i--)
     {
+
     it->birthday();
     
-    if(it->isMonster())
-    {
-        v1.push_back('n');
-    }
-    else
-    {
-        v1.push_back('y');
-    }
+        if(it->isMonster())
+        {
+            v1.push_back('n');
+        }
+     else
+        {
+            v1.push_back('y');
+        }
+    it--;
     }
 
 return(v1);
